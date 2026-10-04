@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="robot">🤖</div>
+        <h1>AI-Based Interview Analysis</h1>
+        <p>Analyze interview answers using Text and Speech</p>
+    </header>
+
+    <div class="card">
+
+        <h2>🎤 Interview Question</h2>
+
+        <div class="question">
+            Tell me about yourself and your skills.
+        </div>
+
+        <h2>📝 Enter Your Answer</h2>
+
+        <textarea id="answer"
+            placeholder="Type your interview answer here..."></textarea>
+
+        <div class="buttons">
+            <button onclick="analyzeAnswer()">🔍 Analyze Answer</button>
+            <button onclick="startSpeech()" class="voice-btn">
+                🎙️ Speak Answer
+            </button>
+            <button onclick="clearAnswer()" class="clear-btn">
+                🗑️ Clear
+            </button>
+        </div>
+
+        <p id="speechStatus"></p>
+
+    </div>
+
+    <div class="card result-card">
+
+        <h2>📊 Interview Analysis Result</h2>
+
+        <div class="score-box">
+            <div class="score">
+                <span id="overallScore">0</span>
+                <small>/100</small>
+            </div>
+            <p>Overall Interview Score</p>
+        </div>
+
+        <div class="metrics">
+
+            <div class="metric">
+                <h3>💬 Communication</h3>
+                <div class="progress">
+                    <div id="communicationBar"></div>
+                </div>
+                <span id="communicationScore">0%</span>
+            </div>
+
+            <div class="metric">
+                <h3>🎯 Relevance</h3>
+                <div class="progress">
+                    <div id="relevanceBar"></div>
+                </div>
+                <span id="relevanceScore">0%</span>
+            </div>
+
+            <div class="metric">
+                <h3>😊 Confidence</h3>
+                <div class="progress">
+                    <div id="confidenceBar"></div>
+                </div>
+                <span id="confidenceScore">0%</span>
+            </div>
+
+            <div class="metric">
+                <h3>🧠 Professionalism</h3>
+                <div class="progress">
+                    <div id="professionalBar"></div>
+                </div>
+                <span id="professionalScore">0%</span>
+            </div>
+
+        </div>
+
+        <div class="feedback">
+            <h3>💡 AI Feedback</h3>
+            <p id="feedback">
+                Enter an answer and click Analyze Answer.
+            </p>
+        </div>
+
+        <div class="detected">
+            <h3>📌 Analysis Details</h3>
+
+            <p>
+                Word Count:
+                <strong id="wordCount">0</strong>
+            </p>
+
+            <p>
+                Positive Words:
+                <strong id="positiveWords">0</strong>
+            </p>
+
+            <p>
+                Skill Keywords:
+                <strong id="skillWords">0</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="examples card">
+
+        <h2>✨ Try Example Answers</h2>
+
+        <button onclick="loadExample(1)">
+            Example 1
+        </button>
+
+        <button onclick="loadExample(2)">
+            Example 2
+        </button>
+
+        <button onclick="loadExample(3)">
+            Example 3
+        </button>
+
+    </div>
+
+    <footer>
+        <p>AI-Based Interview Analysis | Web Technology Mini Project</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
